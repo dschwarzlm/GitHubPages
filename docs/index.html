@@ -1,40 +1,134 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <section data-background="lightblue">
+            <h1>ITP Projekte</h1>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+
+        <section>
+
+            <section data-background="#888888">
+                <h2>Minesweeper</h2>
+            </section>
+
+            <section data-background="#888888">
+                <h4>In Game</h4>
+                <img src="../media/minesweeper1.png"/>
+            </section>
+
+            <section data-background="#888888">
+                <h4>Lose</h4>
+                <img src="../media/minesweeper2.png"/>
+            </section>
+
+            <section data-auto-animate>
+                <h4>Lost Code:</h4>
+                <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+							private void lost() {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText("Verloren!");
+        alert.setOnCloseRequest(new EventHandler<DialogEvent>() {
+            @Override
+            public void handle(DialogEvent dialogEvent) {
+                generateGrid(gridPane);
+            }
+        });
+        alert.show();
+    }
+							}
+                </code></pre>
+            </section>
+
+            <section>
+                <h4>How To Play</h4>
+                <iframe
+                        src="https://www.youtube.com/watch?v=9Qh6fUlhUrs&t=79s"
+                        height="600" width="850"
+                        allow="autoplay"
+                        frameborder="0">
+                </iframe>
+            </section>
+
+        </section>
+
+        <section>
+
+            <section data-background="#417203">
+                <h2>Snake</h2>
+            </section>
+
+            <section data-background="#417203">
+                <h4>Main Menu:</h4>
+                <img src="../media/Snake_MainMenu 1.png" height="380" width="410"/> <img
+                    src="../media/Snake_MainMenu_Grape 1.png" height="380" width="410"/>
+            </section>
+
+
+            <section data-background="#417203">
+                <h4>In Game:</h4>
+                <img src="../media/Snake_played 1.png" height="580" width="610"/>
+            </section>
+
+            <section data-background="#417203">
+                <h5>How To Play</h5>
+                <iframe
+                        src="https://www.youtube.com/embed/DekS8Pgb1qc?autoplay=1&mute=1&loop=1&playlist=DekS8Pgb1qc"
+                        height="600" width="850"
+                        allow="autoplay"
+                        frameborder="0">
+                </iframe>
+            </section>
+
+
+        </section>
+
+        <section>
+
+            <section data-background-transition="slide" data-background="../media/crossyroad1.jpg">
+                <h2>Crossy Road</h2>
+            </section>
+
+            <section>
+                <h4>How To Play</h4>
+            </section>
+
+        </section>
+
+    </div>
+</div>
+
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+</script>
+</body>
 </html>
