@@ -18,26 +18,23 @@
     <div class="slides">
 
         <section>
-            <section data-background="lightblue">
+            <section data-auto-animate data-background="lightblue">
                 <h1>ITP Projekte</h1>
             </section>
 
-            <section data-background="lightblue">
+            <section data-auto-animate data-background="lightblue">
                 <h4>Weiter Informationen</h4>
                 Projete mittels Agiles Projektmanagement gelöst
                 <h7>Trello:</h7>
                 <img src="../media/trello.png"/>
             </section>
 
-            <section data-background="lightblue">
+            <section data-auto-animate data-background="lightblue">
                 <p>Arbeiten mit Github:</p>
-                <p>In GitHub kann man bei team Projekten leicht den Programmierfortschrit der Teammitglieder und seinen eigenen Stand
-                Teilen, so dass das gemeinsame programmieren leichter ist.</p>
-
+                <p>Zum arbeiten im Team Geeignet</p>
                 <img src="../media/github.png"/>
             </section>
         </section>
-
 
 
         <section>
@@ -56,7 +53,7 @@
                 <img src="../media/minesweeper2.png"/>
             </section>
 
-            <section data-auto-animate data-background="#888888">
+            <section data-background="#888888">
                 <h4>Lost Code:</h4>
                 <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
 							private void lost() {
@@ -125,13 +122,13 @@
 
             <section data-background="#ff9652">
                 <h4>Start Screen</h4>
-                <img src="../media/crossyroad1.png" />
+                <img src="../media/crossyroad1.png"/>
             </section>
 
             <section data-background="#ff9652">
                 <h4>Hindernisse</h4>
                 <h6>Train</h6>
-                <img src="../media/crossyroadhindernis1.png"  width="828" height="446"/>
+                <img src="../media/crossyroadhindernis1.png" width="828" height="446"/>
             </section>
 
             <section data-background="#ff9652">
@@ -141,12 +138,12 @@
 
             <section data-background="#ff9652">
                 <h4>Options</h4>
-                <img src="../media/crossyroadoptions.png" />
+                <img src="../media/crossyroadoptions.png"/>
             </section>
 
             <section data-background="#ff9652">
                 <h4>Shop</h4>
-                <img src="../media/crossyroadshop.png" />
+                <img src="../media/crossyroadshop.png"/>
             </section>
 
         </section>
@@ -160,13 +157,54 @@
 
             <section data-background="#934f4d">
                 <h4>Main Menu </h4>
-                <img src="../media/scheresteimpapier1.png" />
+                <img src="../media/scheresteimpapier1.png"/>
             </section>
 
             <section data-background="#934f4d">
                 <h4>Beim Spielen</h4>
-                <img src="../media/scheresteimpapier2.png" />
+                <img src="../media/scheresteimpapier2.png"/>
             </section>
+
+
+            <section data-background="#934f4d">
+                <p>Code für Computer</p>
+                <pre data-id="code"><code data-line-numbers class="hljs" data-trim>
+							public String computerWahl() {
+            String pfadSchere = "src/Bilder/schere.png";
+            String pfadStein = "src/Bilder/stein.png";
+            String pfadPapier = "src/Bilder/papier.png";
+         Image image;
+
+            String auswahlComputer = null;
+          int num = (int) (Math.random() * 3 + 1);
+
+            switch (num) {
+            case 1:
+            auswahlComputer = "Schere";
+            image = new Image(new File(pfadSchere).toURI().toString());
+            computerIMGV.setImage(image);
+            break;
+
+            case 2:
+            auswahlComputer = "Stein";
+            image = new Image(new File(pfadStein).toURI().toString());
+            computerIMGV.setImage(image);
+            break;
+
+            case 3:
+            auswahlComputer = "Papier";
+            image = new Image(new File(pfadPapier).toURI().toString());
+            computerIMGV.setImage(image);
+            break;
+            }
+
+            return auswahlComputer;
+
+            }}}
+    </code></pre>
+            </section>
+
+
 
         </section>
 
